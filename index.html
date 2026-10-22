@@ -1,0 +1,302 @@
+```html
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceviches El Buen Sabor | INATEC León</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            ocean: '#0284c7', // Sky blue ocean tone
+                            deep: '#0f172a',  // Deep sea slate
+                            teal: '#0d9488',  // Tropical teal
+                            coral: '#f97316', // Vibrant orange
+                            citrus: '#84cc16',// Fresh lime green
+                            sand: '#fef3c7',  // Soft warm sand
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tropical-gradient {
+            background: linear-gradient(135deg, #0284c7 0%, #0d9488 50%, #0369a1 100%);
+        }
+        .coral-gradient {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+        }
+        .card-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-coral selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-coral to-amber-400 flex items-center justify-center text-white shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid font-bold fa-shrimp text-2xl"></i>
+                </div>
+                <div>
+                    <span class="block font-heading font-extrabold text-xl text-sky-950 tracking-tight leading-none">CEVICHES</span>
+                    <span class="block font-heading font-bold text-sm text-brand-coral tracking-widest uppercase">El Buen Sabor</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
+                <a href="#inicio" class="hover:text-brand-ocean transition-colors">Inicio</a>
+                <a href="#combos" class="hover:text-brand-ocean transition-colors">Menú & Combos</a>
+                <a href="#reserva" class="hover:text-brand-ocean transition-colors">Reserva Tu Ceviche</a>
+                <a href="#inocuidad" class="hover:text-brand-ocean transition-colors">Inocuidad</a>
+                <a href="#contacto" class="hover:text-brand-ocean transition-colors">Horario & Contacto</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#reserva" class="coral-gradient text-white font-bold px-5 py-2.5 rounded-full shadow-md shadow-orange-500/20 hover:opacity-95 transition-all flex items-center gap-2 text-sm">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Reservar Ahora</span>
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-brand-ocean focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-sky-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 font-medium text-slate-700 hover:text-brand-ocean">Inicio</a>
+            <a href="#combos" class="block py-2 font-medium text-slate-700 hover:text-brand-ocean">Menú & Combos</a>
+            <a href="#reserva" class="block py-2 font-medium text-slate-700 hover:text-brand-ocean">Reserva Tu Ceviche</a>
+            <a href="#inocuidad" class="block py-2 font-medium text-slate-700 hover:text-brand-ocean">Garantía de Inocuidad</a>
+            <a href="#contacto" class="block py-2 font-medium text-slate-700 hover:text-brand-ocean">Contacto y Horarios</a>
+            <a href="#reserva" class="w-full coral-gradient text-white font-bold py-3 rounded-xl text-center block mt-4">
+                <i class="fa-solid fa-shrimp mr-2"></i> Reservar Ahora
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative tropical-gradient text-white py-16 lg:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Academic Banner Badge -->
+            <div class="inline-flex flex-wrap items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-sky-100 px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-6">
+                <span class="bg-brand-coral text-white font-bold px-2.5 py-0.5 rounded-full text-xs uppercase">INATEC</span>
+                <span>Centro Tecnológico Juan De Dios Muñoz Reyes • León, Nicaragua</span>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
+                        Frescura marina a tu alcance que <span class="text-amber-300 underline decoration-brand-coral decoration-wavy decoration-2">no demora</span>, sabor que a todos enamora.
+                    </h1>
+                    <p class="text-sky-100 text-lg sm:text-xl max-w-2xl font-normal leading-relaxed">
+                        El auténtico ceviche de camarón preparado bajo estrictas normas sanitarias y cadena de frío continuo. ¡Servido fresco en el campus de INATEC León!
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#reserva" class="w-full sm:w-auto coral-gradient text-white font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-orange-900/30 hover:scale-105 transition-transform flex items-center justify-center gap-3 text-lg">
+                            <i class="fa-solid fa-receipt text-xl"></i>
+                            <span>Hacer mi Reserva</span>
+                        </a>
+                        <a href="https://chat.whatsapp.com/GL0TvLyTXeyHjNPyxdhbJk?s=cl&p=a&mlu=4&ilr=4" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-7 py-4 rounded-2xl shadow-lg transition-all flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Grupo WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Key highlights chips -->
+                    <div class="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-sky-100 font-medium">
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <i class="fa-solid fa-snowflake text-amber-300"></i> Cadena de frío (2°C - 5°C)
+                        </div>
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <i class="fa-solid fa-fire text-amber-300"></i> Escaldado a 100°C
+                        </div>
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <i class="fa-solid fa-clock text-amber-300"></i> Preventa 24 Hrs
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Feature Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 text-slate-800 shadow-2xl relative border-4 border-amber-300/40">
+                        <div class="absolute -top-4 -right-4 bg-brand-coral text-white font-black px-4 py-2 rounded-2xl shadow-lg transform rotate-6 text-sm uppercase tracking-wider">
+                            ¡Solo C$ 85.00!
+                        </div>
+                        
+                        <div class="text-center mb-6">
+                            <div class="w-24 h-24 mx-auto bg-sky-100 rounded-full flex items-center justify-center text-brand-ocean text-5xl mb-3 shadow-inner">
+                                🍹
+                            </div>
+                            <h3 class="font-heading font-extrabold text-2xl text-slate-900">Vaso de Ceviche de 10 oz</h3>
+                            <p class="text-slate-500 text-sm">Camarón fresco + vegetales crocantes + salsa especial</p>
+                        </div>
+
+                        <ul class="space-y-3 mb-6 text-sm">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-lg mt-0.5"></i>
+                                <span><strong>1 Vaso de 10 oz colmado</strong> de ceviche marinante en limón criollo.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-lg mt-0.5"></i>
+                                <span><strong>Tortillas tostadas</strong> recién hechas del comal.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-lg mt-0.5"></i>
+                                <span><strong>Empaque 100% higiénico:</strong> Cuchara sellada y servilleta de papel.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-lg mt-0.5"></i>
+                                <span><strong>Cero Mermas:</strong> Preparación fresca garantizada mediante preventa.</span>
+                            </li>
+                        </ul>
+
+                        <a href="#reserva" class="block w-full text-center bg-sky-900 hover:bg-sky-950 text-white font-bold py-3.5 rounded-xl transition-colors">
+                            Ver Descuentos por Combos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional & Academic Project Details Section -->
+    <section class="py-10 bg-sky-50 border-y border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-2xl bg-sky-100 text-brand-ocean flex items-center justify-center text-3xl font-bold shrink-0">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-brand-ocean uppercase tracking-wider">Proyecto de Emprendimiento Académico 2026</span>
+                            <h2 class="font-heading font-extrabold text-xl text-slate-900">INATEC Tecnológico Nacional - León</h2>
+                            <p class="text-sm text-slate-600">Carrera: Contabilidad a Distancia | Ing.: Vladimir Esteban Ortega Rojas</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-4 text-xs sm:text-sm bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <div>
+                            <span class="text-slate-400 block font-semibold">Integrantes / Autores:</span>
+                            <span class="font-bold text-slate-800">Br. Oscar Danilo Roque Torres</span>
+                            <span class="text-slate-400 px-1">•</span>
+                            <span class="font-bold text-slate-800">Br. Luis Enrique Grijalva Murillo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combos & Promotions Section -->
+    <section id="combos" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-coral font-bold text-sm tracking-widest uppercase">Promociones Especiales</span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mt-2">Nuestros Combos y Ofertas</h2>
+                <p class="text-slate-600 mt-3">Aprovecha nuestros descuentos especiales para grupos, clases o departamentos en INATEC. ¡Entre más pides, más ahorras!</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Single Unit Card -->
+                <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:shadow-xl transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Individual</div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900">Ceviche Clásico</h3>
+                        <div class="mt-4 mb-6">
+                            <span class="font-heading font-black text-3xl text-slate-900">C$ 85.00</span>
+                            <span class="text-xs text-slate-500 block">+ C$ 25.00 Delivery (Opcional)</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 1 Vaso 10 oz completo</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Tortillas del comal</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Cuchara y servilleta</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectCombo(1)" class="w-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-2.5 rounded-xl text-sm transition-colors">
+                        Seleccionar
+                    </button>
+                </div>
+
+                <!-- Combo 4 -->
+                <div class="bg-sky-50/60 rounded-3xl p-6 border-2 border-sky-200 hover:shadow-xl transition-all flex flex-col justify-between relative">
+                    <div class="absolute -top-3 right-4 bg-sky-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase">
+                        Ahorra 5%
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-sky-600 uppercase tracking-wider mb-2">Combo Cuarteto</div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900">Pack 4 Vasos</h3>
+                        <div class="mt-4 mb-6">
+                            <span class="font-heading font-black text-3xl text-sky-900">C$ 323.00</span>
+                            <span class="text-xs font-bold text-emerald-600 block mt-1"><i class="fa-solid fa-truck-fast"></i> ¡Delivery GRATIS!</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-6">Ideal para compartir entre compañeros de clase durante el receso.</p>
+                    </div>
+                    <button onclick="selectCombo(4)" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-2.5 rounded-xl text-sm transition-colors">
+                        Seleccionar Combo 4
+                    </button>
+                </div>
+
+                <!-- Combo 6 -->
+                <div class="bg-amber-50/70 rounded-3xl p-6 border-2 border-amber-300 hover:shadow-xl transition-all flex flex-col justify-between relative transform lg:-translate-y-2 shadow-md">
+                    <div class="absolute -top-3 right-4 bg-brand-coral text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase">
+                        Ahorra 9.41%
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-brand-coral uppercase tracking-wider mb-2">¡Más Popular!</div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900">Pack 6 Vasos</h3>
+                        <div class="mt-4 mb-6">
+                            <span class="font-heading font-black text-3xl text-amber-900">C$ 462.00</span>
+                            <span class="text-xs font-bold text-emerald-600 block mt-1"><i class="fa-solid fa-truck-fast"></i> ¡Delivery GRATIS!</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-6">La opción favorita para grupos pequeños de docentes o estudiantes.</p>
+                    </div>
+                    <button onclick="selectCombo(6)" class="w-full coral-gradient text-white font-bold py-2.5 rounded-xl text-sm transition-colors shadow-md">
+                        Seleccionar Combo 6
+                    </button>
+                </div>
+
+                <!-- Combo 10 -->
+                <div class="bg-emerald-50/60 rounded-3xl p-6 border-2 border-emerald-200 hover:shadow-xl transition-all flex flex-col justify-between relative">
+                    <div class="absolute -top-3 right-4 bg-emerald-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase">
+                        Ahorra 15%
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-2">Ahorro Máximo</div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900">Pack 10 Vasos</h3>
+                        <div class="mt-4 mb-6">
+                            <span class="font-heading font-black text-3xl text-emerald-950">C$ 722.50</span>
+                            <span class="text-xs font-bold text-emerald-600 block mt-1"><i class="fa-solid fa-truck-fast"></i> ¡Delivery GRATIS!</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-6">Perfecto para oficinas, departamentos administrativos o convivios.</p>
+                    </div>
+                    <button onclick="selectCombo(10)" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-b
